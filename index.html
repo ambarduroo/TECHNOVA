@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="TECHNOVA: noticias de tecnología, inteligencia artificial, celulares y videojuegos.">
+  <title>TECHNOVA | Noticias Tech</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <div class="window-dots" aria-hidden="true">
+      <span class="dot red"></span>
+      <span class="dot yellow"></span>
+      <span class="dot green"></span>
+    </div>
+    <a class="brand-small" href="#inicio">TECH<span>NOVA</span></a>
+    <button class="menu-toggle" id="menuToggle"
+      aria-label="Abrir menú" aria-expanded="false">☰</button>
+    <nav class="navigation" id="navigation">
+      <a href="#inicio">Inicio</a>
+      <a href="#noticias" data-category="Tecnología">Tecnología</a>
+      <a href="#noticias" data-category="IA">Sobre</a>
+    </nav>
+    <form class="search-form" id="searchForm" role="search">
+      <input id="searchInput" type="search"
+        placeholder="Buscar noticias..." aria-label="Buscar noticias">
+      <button type="submit" aria-label="Buscar">⌕</button>
+    </form>
+    <a class="contact-link" href="#footer">Contactanos</a>
+  </header>
+  <main>
+    <section class="hero" id="inicio">
+      <div class="hero-copy">
+        <span class="eyebrow">EL FUTURO ES AHORA</span>
+        <h1>TECH<span>NOVA</span></h1>
+        <p>
+          La tecnología no se detiene. Descubrí las últimas novedades
+          sobre inteligencia artificial, celulares, videojuegos y mucho más.
+        </p>
+        <a href="#noticias" class="primary-button">Explorar noticias ↗</a>
+      </div>
+      <article class="featured-story">
+        <img
+          src="https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=1100&q=85"
+          alt="Representación de inteligencia artificial"
+          class="featured-image">
+        <div class="featured-overlay">
+          <span class="category-pill">INTELIGENCIA ARTIFICIAL</span>
+          <h2>La IA está cambiando el futuro de la tecnología</h2>
+          <p>
+            Descubrí cómo la inteligencia artificial está transformando
+            la forma en que vivimos, estudiamos y trabajamos.
+          </p>
+          <button class="read-button" id="featuredReadMore">Leer más →</button>
+        </div>
+      </article>
+    </section>
+    <section class="news-section" id="noticias">
+      <div class="section-heading">
+        <div>
+          <span class="eyebrow">LO ÚLTIMO</span>
+          <h2>Últimas noticias<span>.</span></h2>
+          <p class="section-description">
+            Todo lo que necesitás saber del mundo tecnológico.
+          </p>
+        </div>
+        <span class="news-count" id="newsCount">6 noticias</span>
+      </div>
+      <div class="category-filters" aria-label="Filtrar noticias">
+        <button class="filter-button active" data-filter="Todas">Todas</button>
+        <button class="filter-button" data-filter="Celulares">Celulares</button>
+        <button class="filter-button" data-filter="IA">IA</button>
+        <button class="filter-button" data-filter="Videojuegos">Videojuegos</button>
+        <button class="filter-button" data-filter="Tecnología">Tecnología</button>
+      </div>
+      <div class="news-grid" id="newsGrid">
+        <!-- Las tarjetas se generan desde JavaScript. -->
+      </div>
+      <p class="empty-message" id="emptyMessage" hidden>
+        No encontramos noticias con esa búsqueda.
+      </p>
+    </section>
+    <section class="newsletter">
+      <div>
+        <span class="eyebrow">MANTENETE AL DÍA</span>
+        <h2>La tecnología llega a tu correo.</h2>
+        <p>Suscribite para recibir novedades y noticias destacadas.</p>
+      </div>
+      <form id="newsletterForm" class="newsletter-form">
+        <label class="visually-hidden" for="emailInput">
+          Tu correo electrónico
+        </label>
+        <input id="emailInput" type="email"
+          placeholder="Tu correo electrónico" required>
+        <button type="submit">Suscribirme ↗</button>
+      </form>
+      <p id="newsletterMessage" class="newsletter-message"
+        aria-live="polite"></p>
+    </section>
+  </main>
+  <footer id="footer">
+    <a class="footer-brand" href="#inicio">TECH<span>NOVA</span></a>
+    <p>Tecnología, innovación y mucho más.</p>
+    <div class="footer-links">
+      <a href="#inicio">Inicio</a>
+      <a href="#noticias">Noticias</a>
+      <a href="#noticias">Tecnología</a>
+    </div>
+    <span class="copyright">© 2026 TECHNOVA · Proyecto educativo</span>
+  </footer>
+  <dialog id="articleDialog" class="article-dialog">
+    <button class="dialog-close" id="dialogClose"
+      aria-label="Cerrar noticia">✕</button>
+    <span id="dialogCategory" class="category-pill"></span>
+    <h2 id="dialogTitle"></h2>
+    <img id="dialogImage" src="" alt="">
+    <p id="dialogDescription"></p>
+    <p class="dialog-note">
+      Esta noticia forma parte de la demostración de TECHNOVA.
+    </p>
+  </dialog>
+</body>
+</html>
+
